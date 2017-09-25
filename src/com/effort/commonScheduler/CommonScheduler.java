@@ -26,6 +26,7 @@ public class CommonScheduler {
     private ExecutorService executorService;
 
     /**
+     *  启动Socket服务
      *
      */
     public void startService(){
@@ -77,6 +78,7 @@ public class CommonScheduler {
     }
 
     /**
+     *  停止socket服务
      *
      */
     public void stopService(){

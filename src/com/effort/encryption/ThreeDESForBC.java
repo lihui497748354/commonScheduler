@@ -38,7 +38,7 @@ public class ThreeDESForBC {
             byte[] result = cipher.doFinal(str.getBytes());
             System.out.println("jia mi : "+ HexBin.encode(result));
 
-            //
+            //解密
             cipher.init(Cipher.DECRYPT_MODE,convertKey);
             result = cipher.doFinal(result);
             System.out.println("jie mi : "+new String(result));

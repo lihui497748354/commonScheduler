@@ -14,24 +14,14 @@ import java.security.Security;
 
 public class AES256ForBC {
 
-    private static final String key = "zsyy";
-    private static SecureRandom secureRandom;
-
-    public AES256ForBC(){
-        this.secureRandom = new SecureRandom(tohash256Deal(key));
-    }
-
-//    = new SecureRandom(tohash256Deal(key));
-
-
-
     private static byte[] encrypt(String password, String key) {
         try {
             Security.addProvider(new BouncyCastleProvider());
             //"AES"：请求的密钥算法的标准名称
             KeyGenerator kgen = KeyGenerator.getInstance("AES");
-//            SecureRandom securerandom = new SecureRandom(tohash256Deal(key));
-            kgen.init(256, secureRandom);
+            SecureRandom securerandom = new SecureRandom(tohash256Deal(key));
+
+            kgen.init(256, securerandom);
             SecretKey secretKey = kgen.generateKey();
             byte[] enCodeFormat = secretKey.getEncoded();
             SecretKeySpec secretKeySpec = new SecretKeySpec(enCodeFormat, "AES");
@@ -40,6 +30,11 @@ public class AES256ForBC {
             cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
             byte[] byteContent = password.getBytes("utf-8");
             byte[] cryptograph = cipher.doFinal(byteContent);
+//            byte[] test = Base64.encode(cryptograph);
+//            System.out.println(AES256ForBC.parseByte2HexStr(test));
+//            cipher.init(Cipher.DECRYPT_MODE, secretKeySpec);
+//            byte[] content = cipher.doFinal(Base64.decode(test));
+//            System.out.println(new String(content));
             return Base64.encode(cryptograph);
         } catch (Exception e) {
             e.printStackTrace();
@@ -50,9 +45,11 @@ public class AES256ForBC {
     private static String decrypt(byte[] cryptograph, String key) {
         try {
             Security.addProvider(new BouncyCastleProvider());
+            //"AES"：请求的密钥算法的标准名称
             KeyGenerator kgen = KeyGenerator.getInstance("AES");
-//            SecureRandom securerandom = new SecureRandom(tohash256Deal(key));
-            kgen.init(256, secureRandom);
+            SecureRandom securerandom = new SecureRandom(tohash256Deal(key));
+
+            kgen.init(256, securerandom);
             SecretKey secretKey = kgen.generateKey();
             byte[] enCodeFormat = secretKey.getEncoded();
             SecretKeySpec secretKeySpec = new SecretKeySpec(enCodeFormat, "AES");
@@ -92,9 +89,8 @@ public class AES256ForBC {
 
     public static void main(String[] args) {
 
+        String key = "zxyy";
         String password = "0f607264fc6318a92b9e13c65db7cd3c";
-        System.out.println("明文：" + password);
-        System.out.println("key：" + key);
 
         byte[] encryptResult = AES256ForBC.encrypt(password, key);
         System.out.println("密文：" + AES256ForBC.parseByte2HexStr(encryptResult));

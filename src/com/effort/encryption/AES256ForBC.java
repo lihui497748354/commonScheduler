@@ -8,7 +8,6 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import javax.print.DocFlavor;
 import java.io.*;
 import java.security.*;
 
@@ -28,7 +27,12 @@ public class AES256ForBC {
         Security.addProvider(new BouncyCastleProvider());
         try {
             KeyGenerator keyGenerator = KeyGenerator.getInstance(ALGORITHM);
-            SecureRandom secureRandom = new SecureRandom(tohash256Deal(key));
+            //SecureRandom 实现完全隨操作系统本身的内部状态，
+            //除非调用方在调用 getInstance 方法之后又调用了 setSeed 方法；
+            //该实现在 windows 上每次生成的 key 都相同，但是在 solaris 或部分 linux 系统上则不同。
+//            SecureRandom secureRandom = new SecureRandom(tohash256Deal(key));
+            SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
+            secureRandom.setSeed(key.getBytes("UTF-8"));
             keyGenerator.init(256,secureRandom);
             SecretKey secretKey = keyGenerator.generateKey();
             byte[] enCodeFormat = secretKey.getEncoded();
@@ -225,6 +229,7 @@ public class AES256ForBC {
         String password = "0f607264fc6318a92b9e13c65db7cd3c";
 
         byte[] encryptResult = new AES256ForBC().encrypt(password, key);
+        System.out.println("加密："+password);
         System.out.println("密文：" + new AES256ForBC().getHexString(encryptResult));
 
         String decryptResult = new AES256ForBC().decrypt(encryptResult, key);

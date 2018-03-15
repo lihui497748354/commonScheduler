@@ -9,7 +9,9 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
-import java.security.*;
+import java.security.KeyStore;
+import java.security.SecureRandom;
+import java.security.Security;
 
 public class AES256ForBC {
     private static final String ALGORITHM = "AES";
@@ -86,19 +88,6 @@ public class AES256ForBC {
         }
         return null;
     }
-
-    private byte[] tohash256Deal(String key){
-        try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            digest.update(key.getBytes());
-            byte[] hex = digest.digest();
-            return hex;
-        }catch (NoSuchAlgorithmException e){
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     /**
      * 获取*.keyStore文件中的密钥
      *
@@ -121,7 +110,6 @@ public class AES256ForBC {
         }
         return null;
     }
-
     //字符串加密
     private String encodeBase64(String str) throws UnsupportedEncodingException {
         String bash64Str = new BASE64Encoder().encode(str.getBytes("UTF-8"));
@@ -133,7 +121,6 @@ public class AES256ForBC {
         String result = new String(bytes,"UTF-8");
         return result;
     }
-
     /**
      * 转化为16进制数
      *
@@ -152,7 +139,6 @@ public class AES256ForBC {
         }
         return stringBuilder.toString();
     }
-
     /**
      * 将16进制的字符串转化为byte数组
      * @param hexStr
@@ -175,7 +161,6 @@ public class AES256ForBC {
     private byte charToByte(char c){
         return (byte) "0123456789ABCDEF".indexOf(c);
     }
-
     /**
      * 提供公开的生成加密文件的方法
      *
@@ -196,7 +181,6 @@ public class AES256ForBC {
             e.printStackTrace();
         }
     }
-
     /**
      * 读取加密文件中的信息
      *

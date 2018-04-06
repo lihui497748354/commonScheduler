@@ -96,7 +96,7 @@ public class AES256ForBC {
      */
     private String getPrivateKey(){
         try {
-            FileInputStream fileInputStream = new FileInputStream("url");
+            FileInputStream fileInputStream = new FileInputStream("/home/effort/keys/keystore/private.keystore");
             //*.keyStore文件加密方式是JCEKS
             KeyStore keyStore = KeyStore.getInstance("JCEKS");
             //密钥库和别名密码相同
@@ -209,7 +209,8 @@ public class AES256ForBC {
 
     public static void main(String[] args) {
 
-        String key = "zxyy";
+        String key = new AES256ForBC().getPrivateKey();
+        System.out.println(key);
         String password = "0f607264fc6318a92b9e13c65db7cd3c";
 
         byte[] encryptResult = new AES256ForBC().encrypt(password, key);

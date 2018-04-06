@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fce3323-86b9-4b7d-add9-8a5db127a039" name="Default" comment="">
+    <list default="true" id="0fce3323-86b9-4b7d-add9-8a5db127a039" name="Default" comment="SecureRandom 实现完全隨操作系统本身的内部状态，除非调用方在调用 getInstance 方法之后又调用了 setSeed 方法；该实现在 windows 上每次生成的 key 都相同，但是在 solaris 或部分 linux 系统上则不同。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/com/effort/encryption/AES256ForBC.java" afterPath="$PROJECT_DIR$/src/com/effort/encryption/AES256ForBC.java" />
     </list>
@@ -18,13 +18,23 @@
       <file leaf-file-name="AES256ForBC.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/AES256ForBC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="1995">
+              <caret line="209" column="44" lean-forward="true" selection-start-line="209" selection-start-column="44" selection-end-line="209" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5173#5174#0" expanded="true" />
-                <element signature="e#5232#5233#0" expanded="true" />
+                <element signature="e#5213#5214#0" expanded="true" />
+                <element signature="e#5272#5273#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThreeDES.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/ThreeDES.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="30" column="67" lean-forward="true" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -32,8 +42,8 @@
       <file leaf-file-name="ThreeDESForBC.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/ThreeDESForBC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="35" column="72" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="72" />
+            <state relative-caret-position="91">
+              <caret line="35" column="72" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -42,7 +52,7 @@
       <file leaf-file-name="MessageDigest.java" pinned="false" current-in-tab="false">
         <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/security/MessageDigest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
+            <state relative-caret-position="2227">
               <caret line="166" column="70" lean-forward="false" selection-start-line="166" selection-start-column="57" selection-end-line="166" selection-end-column="70" />
               <folding />
             </state>
@@ -52,7 +62,7 @@
       <file leaf-file-name="Security.java" pinned="false" current-in-tab="false">
         <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/security/Security.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="11101">
               <caret line="690" column="20" lean-forward="false" selection-start-line="690" selection-start-column="20" selection-end-line="690" selection-end-column="20" />
               <folding />
             </state>
@@ -63,8 +73,17 @@
         <entry file="jar:///usr/local/java/jdk1.8.0_161/jre/lib/rt.jar!/sun/misc/BASE64Encoder.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-              <folding />
+              <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <folding>
+                <marker date="1513729274000" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1513729274000" expanded="false" signature="132:181" ph="..." />
+                <marker date="1513729274000" expanded="true" signature="641:648" ph="{}" />
+                <marker date="1513729274000" expanded="false" signature="682:693" ph=" { " />
+                <marker date="1513729274000" expanded="false" signature="702:708" ph=" }" />
+                <marker date="1513729274000" expanded="false" signature="742:753" ph=" { " />
+                <marker date="1513729274000" expanded="false" signature="763:769" ph=" }" />
+                <marker date="1513729274000" expanded="true" signature="872:2037" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,7 +93,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
+              <folding>
+                <marker date="1513729274000" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1513729274000" expanded="false" signature="132:217" ph="..." />
+                <marker date="1513729274000" expanded="true" signature="784:791" ph="{}" />
+                <marker date="1513729274000" expanded="false" signature="825:836" ph=" { " />
+                <marker date="1513729274000" expanded="false" signature="845:851" ph=" }" />
+                <marker date="1513729274000" expanded="false" signature="885:896" ph=" { " />
+                <marker date="1513729274000" expanded="false" signature="906:912" ph=" }" />
+                <marker date="1513729274000" expanded="true" signature="1018:3060" ph="{...}" />
+                <marker date="1513729274000" expanded="true" signature="3073:3324" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,7 +111,7 @@
       <file leaf-file-name="Base64.java" pinned="false" current-in-tab="false">
         <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/util/Base64.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="2652">
               <caret line="196" column="16" lean-forward="false" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
               <folding />
             </state>
@@ -169,8 +198,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,18 +216,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="effort" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="commonScheduler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="commonScheduler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="effort" type="462c0819:PsiDirectoryNode" />
-              <item name="encryption" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -740,7 +762,10 @@
       <workItem from="1520664900936" duration="46000" />
       <workItem from="1520945932743" duration="13427000" />
       <workItem from="1521038059998" duration="3611000" />
-      <workItem from="1521121963493" duration="7809000" />
+      <workItem from="1521121963493" duration="7884000" />
+      <workItem from="1521208372962" duration="1080000" />
+      <workItem from="1521699186257" duration="7000" />
+      <workItem from="1522991518149" duration="630000" />
     </task>
     <task id="LOCAL-00001" summary="添加3DES算法">
       <created>1520955245809</created>
@@ -777,18 +802,24 @@
       <option name="project" value="LOCAL" />
       <updated>1521129484984</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="SecureRandom 实现完全隨操作系统本身的内部状态，除非调用方在调用 getInstance 方法之后又调用了 setSeed 方法；该实现在 windows 上每次生成的 key 都相同，但是在 solaris 或部分 linux 系统上则不同。">
+      <created>1521129798884</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1521129798884</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28597000" />
+    <option name="totallyTimeSpent" value="30389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="706" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -799,7 +830,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2647504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27609682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -813,6 +844,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -874,16 +906,75 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5173#5174#0" expanded="true" />
-            <element signature="e#5232#5233#0" expanded="true" />
+            <element signature="e#5213#5214#0" expanded="true" />
+            <element signature="e#5272#5273#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/TestDEmo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/ThreeDESForBC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        <state relative-caret-position="595">
+          <caret line="35" column="72" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/security/MessageDigest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2822">
+          <caret line="166" column="70" lean-forward="false" selection-start-line="166" selection-start-column="57" selection-end-line="166" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/security/Security.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11730">
+          <caret line="690" column="20" lean-forward="false" selection-start-line="690" selection-start-column="20" selection-end-line="690" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/jre/lib/rt.jar!/sun/misc/BASE64Encoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <marker date="1513729274000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1513729274000" expanded="false" signature="132:181" ph="..." />
+            <marker date="1513729274000" expanded="true" signature="641:648" ph="{}" />
+            <marker date="1513729274000" expanded="false" signature="682:693" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="702:708" ph=" }" />
+            <marker date="1513729274000" expanded="false" signature="742:753" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="763:769" ph=" }" />
+            <marker date="1513729274000" expanded="true" signature="872:2037" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/jre/lib/rt.jar!/sun/misc/BASE64Decoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <marker date="1513729274000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1513729274000" expanded="false" signature="132:217" ph="..." />
+            <marker date="1513729274000" expanded="true" signature="784:791" ph="{}" />
+            <marker date="1513729274000" expanded="false" signature="825:836" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="845:851" ph=" }" />
+            <marker date="1513729274000" expanded="false" signature="885:896" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="906:912" ph=" }" />
+            <marker date="1513729274000" expanded="true" signature="1018:3060" ph="{...}" />
+            <marker date="1513729274000" expanded="true" signature="3073:3324" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/util/Base64.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2652">
+          <caret line="196" column="16" lean-forward="false" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -894,8 +985,100 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5173#5174#0" expanded="true" />
-            <element signature="e#5232#5233#0" expanded="true" />
+            <element signature="e#5213#5214#0" expanded="true" />
+            <element signature="e#5272#5273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/ThreeDESForBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="72" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/security/MessageDigest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2822">
+          <caret line="166" column="70" lean-forward="false" selection-start-line="166" selection-start-column="57" selection-end-line="166" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/security/Security.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11730">
+          <caret line="690" column="20" lean-forward="false" selection-start-line="690" selection-start-column="20" selection-end-line="690" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/jre/lib/rt.jar!/sun/misc/BASE64Encoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <marker date="1513729274000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1513729274000" expanded="false" signature="132:181" ph="..." />
+            <marker date="1513729274000" expanded="true" signature="641:648" ph="{}" />
+            <marker date="1513729274000" expanded="false" signature="682:693" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="702:708" ph=" }" />
+            <marker date="1513729274000" expanded="false" signature="742:753" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="763:769" ph=" }" />
+            <marker date="1513729274000" expanded="true" signature="872:2037" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/jre/lib/rt.jar!/sun/misc/BASE64Decoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <marker date="1513729274000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1513729274000" expanded="false" signature="132:217" ph="..." />
+            <marker date="1513729274000" expanded="true" signature="784:791" ph="{}" />
+            <marker date="1513729274000" expanded="false" signature="825:836" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="845:851" ph=" }" />
+            <marker date="1513729274000" expanded="false" signature="885:896" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="906:912" ph=" }" />
+            <marker date="1513729274000" expanded="true" signature="1018:3060" ph="{...}" />
+            <marker date="1513729274000" expanded="true" signature="3073:3324" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/util/Base64.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2652">
+          <caret line="196" column="16" lean-forward="false" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/AES256ForBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5213#5214#0" expanded="true" />
+            <element signature="e#5272#5273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/TestDEmo.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/AES256ForBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5213#5214#0" expanded="true" />
+            <element signature="e#5272#5273#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -904,7 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
           <caret line="93" column="13" lean-forward="false" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,7 +1101,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="39" column="54" lean-forward="false" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,7 +1209,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="150" column="18" lean-forward="false" selection-start-line="150" selection-start-column="18" selection-end-line="150" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1044,22 +1224,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="187" column="33" lean-forward="false" selection-start-line="187" selection-start-column="29" selection-end-line="187" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/TestDEmo.java" />
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/security/MessageDigest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2227">
+          <caret line="166" column="70" lean-forward="false" selection-start-line="166" selection-start-column="57" selection-end-line="166" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/ThreeDES.java">
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/security/Security.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="30" column="81" lean-forward="true" selection-start-line="30" selection-start-column="81" selection-end-line="30" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/util/Base64.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="196" column="16" lean-forward="false" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
+        <state relative-caret-position="11101">
+          <caret line="690" column="20" lean-forward="false" selection-start-line="690" selection-start-column="20" selection-end-line="690" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1067,8 +1247,17 @@
     <entry file="jar:///usr/local/java/jdk1.8.0_161/jre/lib/rt.jar!/sun/misc/BASE64Encoder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding />
+          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <marker date="1513729274000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1513729274000" expanded="false" signature="132:181" ph="..." />
+            <marker date="1513729274000" expanded="true" signature="641:648" ph="{}" />
+            <marker date="1513729274000" expanded="false" signature="682:693" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="702:708" ph=" }" />
+            <marker date="1513729274000" expanded="false" signature="742:753" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="763:769" ph=" }" />
+            <marker date="1513729274000" expanded="true" signature="872:2037" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1076,50 +1265,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <marker date="1513729274000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1513729274000" expanded="false" signature="132:217" ph="..." />
+            <marker date="1513729274000" expanded="true" signature="784:791" ph="{}" />
+            <marker date="1513729274000" expanded="false" signature="825:836" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="845:851" ph=" }" />
+            <marker date="1513729274000" expanded="false" signature="885:896" ph=" { " />
+            <marker date="1513729274000" expanded="false" signature="906:912" ph=" }" />
+            <marker date="1513729274000" expanded="true" signature="1018:3060" ph="{...}" />
+            <marker date="1513729274000" expanded="true" signature="3073:3324" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/util/Base64.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2652">
+          <caret line="196" column="16" lean-forward="false" selection-start-line="196" selection-start-column="16" selection-end-line="196" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/security/Security.java">
+    <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/ThreeDES.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="690" column="20" lean-forward="false" selection-start-line="690" selection-start-column="20" selection-end-line="690" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/java/jdk1.8.0_161/src.zip!/java/security/MessageDigest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="166" column="70" lean-forward="false" selection-start-line="166" selection-start-column="57" selection-end-line="166" selection-end-column="70" />
+        <state relative-caret-position="272">
+          <caret line="30" column="67" lean-forward="true" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/ThreeDESForBC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="35" column="72" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/TestDEmo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="30" />
+        <state relative-caret-position="91">
+          <caret line="35" column="72" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/effort/encryption/AES256ForBC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state relative-caret-position="1995">
+          <caret line="209" column="44" lean-forward="true" selection-start-line="209" selection-start-column="44" selection-end-line="209" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5173#5174#0" expanded="true" />
-            <element signature="e#5232#5233#0" expanded="true" />
+            <element signature="e#5213#5214#0" expanded="true" />
+            <element signature="e#5272#5273#0" expanded="true" />
           </folding>
         </state>
       </provider>
